@@ -30,26 +30,10 @@ The dataset is an Excel file that consists of 23 tables (worksheets):
 21. **shipments**: ShipmentID, OrderID, ShipMode, ShipDate, DeliveryDate
 22. **subcategories**: CategorySubcategory
 23. **user_details**: UserID, CreditLimit, Phone
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Nightmare Datamodel
+
+<img width="1527" height="960" alt="nightmare_datamodel" src="https://github.com/user-attachments/assets/03c8e607-4f72-42bd-8edb-b80e7a6c1da8" />
+
 ## Rules and Standards
 ## Phases in Data Modelling
 ## Steps
