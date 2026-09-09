@@ -37,15 +37,15 @@ The dataset is an Excel file that consists of 23 tables (worksheets):
 ## Rules and Standards applied
 Rules:
 1. Explore before building
-  * Analyze the business
-  * Explore the processes
-  * Understand the data 
+   * Analyze the business
+   * Explore the processes
+   * Understand the data 
 2. Know the **grain**
-  * Make clear what one row represents.
-  * A dimension row = one customer
-  * A fact row = one sale
+   * Make clear what one row represents.
+   * A dimension row = one customer
+   * A fact row = one sale
 3. Set standards up front and follow till the end.
-  * Naming standards for tables and columns, prefixes, suffixes.
+   * Naming standards for tables and columns, prefixes, suffixes.
 4. Every column _earns its place_. If it doesn't help the report, drop it. This results in lighter files and fewer fields so less confusing to wade through.
 5. Protect the numbers like _totals_, re-check after every change.
 6. Build a **Star Schema**: a _fact_ in the middle and _dimensions_ around it.
