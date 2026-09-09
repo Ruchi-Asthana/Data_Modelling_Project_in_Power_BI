@@ -36,10 +36,19 @@ The dataset is an Excel file that consists of 23 tables (worksheets):
 
 ## Rules and Standards applied
 Rules:
-1. Build a **Star Schema**: a _fact_ in the middle and _dimensions_ around it.
-2. Always understand the _grain_ before making changes. For example, the grain is 'one order per row'.
-3. Every column _earns its place_. If it doesn't help the report, drop it. This results in lighter files and fewer fields so less confusing to wade through.
-4. Protect the numbers like _totals_, re-check after every change.
+1. Explore before building
+  * Analyze the business
+  * Explore the processes
+  * Understand the data 
+2. Know the **grain**
+  * Make clear what one row represents.
+  * A dimension row = one customer
+  * A fact row = one sale
+3. Set standards up front and follow till the end.
+  * Naming standards for tables and columns, prefixes, suffixes.
+4. Every column _earns its place_. If it doesn't help the report, drop it. This results in lighter files and fewer fields so less confusing to wade through.
+5. Protect the numbers like _totals_, re-check after every change.
+6. Build a **Star Schema**: a _fact_ in the middle and _dimensions_ around it.
 
 Standards:
 * Standard Language:
@@ -55,25 +64,29 @@ Standards:
 * Standard Friendly Names: readable names, not cryptic codes
   * for example, cust_nm = customer_name | tot_rev = total_revenue
 ## Phases in Data Modelling
-* Phase 1: Explore before you build
-  * Analyse the business
-  * Explore the processes
-  * Understand the data 
-* Phase 2: Know the Grain
-  * Don't connect tables blindly.
-  * Make it clear what one row represents
-  * a dimension row = one customer
-  * a fact row = one sale
-* Phase 3: Set Standards up front
-  * Set naming standards for tables and columns, prefixes, suffixes **first** and follow to the end.
-* Phase 4: Remove what is not needed
-  * Keep what reporting needs, cut everything else. 
-* Phase 5: Build the star schema
-## Steps
-* Building dimensions
-* Building facts
-* Measures and Date table
-* RLS
+* Phase 1: Prepare and Explore
+  * Explore the messy model.
+  * Prepare the workspace.
+  * Understand the business.
+  * Understand the data.
+  * Spot dimensions vs facts.
+* Phase 2: Dimensions
+  * Build clean dimensions, one by one.
+  * Group the tables for one entity.
+  * Reshape into one clean dimension.
+  * Clean it to the standards.
+  * Repeat for every dimension.
+* Phase 3: Facts
+  * Pick an event, read its grain.
+  * Build the fact from the details.
+  * Connect every dimension.
+  * Test so the numbers never break.
+* Phase 4: Polish
+  * Re-check the standards.
+  * Add the date dimension.
+  * Build the measures.
+  * Add row-level security
+  * Final validation
 ## Final Model
 
 <img width="1432" height="738" alt="final_model" src="https://github.com/user-attachments/assets/ac15b757-7785-42bf-9d8e-aea61efe410e" />
