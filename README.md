@@ -50,7 +50,7 @@ Standards:
 * Standard Tables: **fact_** for fact tables and **dim_** for dimension tables
   * for example, sales = fact_sales | customer = dim_customer
 * Standard Keys:
-  * _key: we make it | _id = from the source
+  * _key: we make it | _id: from the source
   * for example, id_customer = customer_id | CustKey = customer_key
 * Standard Friendly Names: readable names, not cryptic codes
   * for example, cust_nm = customer_name | tot_rev = total_revenue
