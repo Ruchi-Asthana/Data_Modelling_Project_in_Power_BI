@@ -34,8 +34,32 @@ The dataset is an Excel file that consists of 23 tables (worksheets):
 
 <img width="1527" height="960" alt="nightmare_datamodel" src="https://github.com/user-attachments/assets/03c8e607-4f72-42bd-8edb-b80e7a6c1da8" />
 
-## Rules and Standards
+## Rules and Standards applied
+Rules:
+1. Build a **Star Schema**: a _fact_ in the middle and _dimensions_ around it.
+2. Always understand the _grain_ before making changes. For example, the grain is 'one order per row'.
+3. Every column _earns its place_. If it doesn't help the report, drop it. This results in lighter files and fewer fields so less confusing to wade through.
+4. Protect the numbers like _totals_, re-check after every change.
+
+Standards:
+* Standard Language:
+  * One language everywhere - English
+* Standard Naming: **snake_case**
+  * all lowercase joined with _ (underscore)
+  * for example, CustomerName = customer_name
+* Standard Tables: **fact_** for fact tables and **dim_** for dimension tables
+  * for example, sales = fact_sales | customer = dim_customer
+* Standard Keys:
+  * _key: we make it | _id = from the source
+  * for example, id_customer = customer_id | CustKey = customer_key
+* Standard Friendly Names: readable names, not cryptic codes
+  * for example, cust_nm = customer_name | tot_rev = total_revenue
 ## Phases in Data Modelling
+* Phase 1: Explore before you build
+* Phase 2: Know the Grain
+* Phase 3: Set Standards up front
+* Phase 4: Remove what is not needed
+* Phase 5: Build the star schema
 ## Steps
 * Building dimensions
 * Building facts
