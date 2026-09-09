@@ -56,13 +56,22 @@ Standards:
   * for example, cust_nm = customer_name | tot_rev = total_revenue
 ## Phases in Data Modelling
 * Phase 1: Explore before you build
+  * Analyse the business
+  * Explore the processes
+  * Understand the data 
 * Phase 2: Know the Grain
+  * Don't connect tables blindly.
+  * Make it clear what one row represents
+  * a dimension row = one customer
+  * a fact row = one sale
 * Phase 3: Set Standards up front
+  * Set naming standards for tables and columns, prefixes, suffixes **first** and follow to the end.
 * Phase 4: Remove what is not needed
+  * Keep what reporting needs, cut everything else. 
 * Phase 5: Build the star schema
 ## Steps
 * Building dimensions
 * Building facts
-* Measures
+* Measures and Date table
 * RLS
 ## Conclusion
