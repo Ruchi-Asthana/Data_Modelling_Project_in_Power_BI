@@ -74,4 +74,7 @@ Standards:
 * Building facts
 * Measures and Date table
 * RLS
-## Conclusion
+## Final Model
+
+<img width="1432" height="738" alt="final_model" src="https://github.com/user-attachments/assets/ac15b757-7785-42bf-9d8e-aea61efe410e" />
+
